@@ -1,0 +1,20 @@
+# End time: 23:54:30 on Oct 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -lib build/lib pipelined_mac_random_tb -gNUM_CYCLES=10000 
+# Start time: 23:54:30 on Oct 12,2026
+# Loading sv_std.std
+# Loading build/lib.pipelined_mac_random_tb
+# Loading build/lib.pipelined_mac
+# 
+# ----- TEST SUMMARY -----
+# Inputs accepted : 4025
+# Outputs checked : 4025
+# Errors          : 0
+# Queue remaining : 0
+# RANDOMIZED TEST PASSED
+# ** Note: $stop    : tb/pipelined_mac_tb_randomized.sv(270)
+#    Time: 100075 ns  Iteration: 1  Instance: /pipelined_mac_random_tb
+# Break in Module pipelined_mac_random_tb at tb/pipelined_mac_tb_randomized.sv line 270
+# Stopped at tb/pipelined_mac_tb_randomized.sv line 270
+# End time: 23:54:30 on Oct 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

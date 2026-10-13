@@ -1,0 +1,12 @@
+# vsim -lib build/lib pipelined_mac_tb 
+# Start time: 23:54:30 on Oct 12,2026
+# Loading sv_std.std
+# Loading build/lib.pipelined_mac_tb
+# Loading build/lib.pipelined_mac
+# PASS: Expected 20, got 20
+# PASS: Expected 60, got 60
+# PASS: Expected 27, got 27
+# ** Note: $stop    : tb/pipelined_mac_tb.sv(108)
+#    Time: 125 ns  Iteration: 1  Instance: /pipelined_mac_tb
+# Break in Module pipelined_mac_tb at tb/pipelined_mac_tb.sv line 108
+# Stopped at tb/pipelined_mac_tb.sv line 108

@@ -2,11 +2,16 @@
 
 Small RTL designs with readable interfaces and reproducible, self-checking simulation. Prepared for [timfanuel](https://github.com/timfanuel)'s engineering portfolio.
 
-**Current contents:** a parameterized two-stage ready/valid pipeline. Its RTL is preserved unchanged. The synchronous FIFO and round-robin arbiter were not found in the inspected local folders and are not included or claimed as verified.
+**Current contents:** a parameterized two-stage ready/valid pipeline and a pipelined add–multiply datapath. Both RTL modules are preserved unchanged. The synchronous FIFO and round-robin arbiter were not found in the inspected local folders and are not included or claimed as verified.
 
 | Design | RTL | Verification | Status |
 | --- | --- | --- | --- |
 | Ready/valid pipeline | [`rtl/rv_pipeline.sv`](rtl/rv_pipeline.sv) | Original randomized scoreboard and added portable regression | 9/9 regression configurations passed; original scoreboard completed without errors |
+| Pipelined add–multiply | [`projects/pipelined_arithmetic/rtl/pipelined_mac.sv`](projects/pipelined_arithmetic/rtl/pipelined_mac.sv) | Existing directed and randomized scoreboards | 3 directed cases and 4,025 randomized outputs passed at width 8 |
+
+## Pipelined arithmetic project
+
+The arithmetic datapath computes unsigned **`(a + b) * c`** in two ready/valid stages: a widened addition followed by multiplication. The existing module name is `pipelined_mac`; it has no accumulator. Its [project README](projects/pipelined_arithmetic/README.md) explains widths, reset, backpressure, design decisions, actual simulation results, and verification limitations. From the repository root, run `./projects/pipelined_arithmetic/sim/run.ps1` (or pass `-Simulator` with the ModelSim executable path). Arithmetic logs are under `projects/pipelined_arithmetic/reports/`; these are width-8 simulations, with no synthesis or physical hardware claim.
 
 ## Ready/valid pipeline
 
@@ -63,6 +68,6 @@ Saved Quartus Prime 25.1std.0 reports dated **September 8, 2026**, identify `rv_
 
 ## Repository scope and provenance
 
-Only the pipeline RTL, its existing testbench, a new regression, simulation scripts, selected reports, and a compact waveform are included. UART, MAC, adders, the untested FIFO-to-ready/valid adapter, course homework, simulator databases, and programming files are excluded.
+The repository includes pipeline RTL, its existing testbench, a new regression, simulation scripts, selected reports, a compact waveform, and the separately approved pipelined arithmetic project. UART, standalone adders, the untested FIFO-to-ready/valid adapter, course homework, simulator databases, and programming files are excluded.
 
-The owner described the pipeline as independent work. No assignment-sharing restriction or third-party source notice was found in the selected RTL/testbench; this inspection cannot establish original authorship. Vendor notices in saved reports remain intact. No open-source license is assigned automatically. Publication review and manual setup steps are in [`docs/PUBLICATION.md`](docs/PUBLICATION.md).
+The owner described the pipeline as independent work and explicitly approved public inclusion of the arithmetic project. No assignment-sharing restriction or third-party source notice was found in the selected source files; this inspection cannot establish original authorship. Vendor notices in saved reports remain intact. No open-source license is assigned automatically. Publication review is in [`docs/PUBLICATION.md`](docs/PUBLICATION.md).

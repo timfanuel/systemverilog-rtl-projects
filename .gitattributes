@@ -3,4 +3,6 @@
 rtl/rv_pipeline.sv -text
 tb/rv_pipeline_tb.sv -text
 reports/synthesis/*.rpt -text
+projects/pipelined_arithmetic/rtl/*.sv -text
+projects/pipelined_arithmetic/tb/*.sv -text
 *.svg text eol=lf
