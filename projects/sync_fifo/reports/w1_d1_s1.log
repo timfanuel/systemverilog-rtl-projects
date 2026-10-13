@@ -1,0 +1,10 @@
+# vsim -onfinish stop -voptargs="+acc" -lib build/lib sync_fifo_regression_tb -gSEED=1 -gDEPTH=1 -gDATA_WIDTH=1 
+# Start time: 00:16:20 on Oct 13,2026
+# Loading sv_std.std
+# Loading build/lib.sync_fifo_regression_tb
+# Loading build/lib.sync_fifo
+# PASS FIFO width=1 depth=1 seed=1 writes=2522 reads=2521 simultaneous=0 flushed=1 blocked_w=2540 blocked_r=2551 final=0
+# ** Note: $finish    : tb/sync_fifo_regression_tb.sv(83)
+#    Time: 100196 ns  Iteration: 0  Instance: /sync_fifo_regression_tb
+# Break in Module sync_fifo_regression_tb at tb/sync_fifo_regression_tb.sv line 83
+# Stopped at tb/sync_fifo_regression_tb.sv line 83

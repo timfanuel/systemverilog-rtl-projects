@@ -1,0 +1,24 @@
+# End time: 00:16:23 on Oct 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -onfinish stop -lib build/lib sync_fifo_tb 
+# Start time: 00:16:23 on Oct 13,2026
+# Loading sv_std.std
+# Loading build/lib.sync_fifo_tb
+# Loading build/lib.sync_fifo
+# ** Warning: (vsim-8311) System Verilog assertions are supported only in Questasim.
+# 
+# ----- FIFO RANDOM TEST SUMMARY -----
+# Write-only accepted:   2502
+# Read-only accepted:    2499
+# Simultaneous R/W:      2249
+# Blocked writes (full): 255
+# Blocked reads (empty): 234
+# Final scoreboard size: 3
+# ------------------------------------
+# 
+# ** Note: $finish    : tb/sync_fifo_tb.sv(310)
+#    Time: 200010 ns  Iteration: 1  Instance: /sync_fifo_tb
+# Break in Module sync_fifo_tb at tb/sync_fifo_tb.sv line 310
+# Stopped at tb/sync_fifo_tb.sv line 310
+# End time: 00:16:23 on Oct 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1

@@ -1,0 +1,16 @@
+/build/
+/work/
+modelsim.ini
+transcript
+*.wlf
+*.vcd
+*.qdb
+*.qpg
+*.qtl
+*.bak
+*.log
+!/reports/*.log
+.env
+.env.*
+*.pem
+*.key

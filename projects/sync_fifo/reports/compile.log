@@ -1,0 +1,21 @@
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:16:20 on Oct 13,2026
+# vlog -sv -work build/lib rtl/sync_fifo.sv tb/sync_fifo_tb.sv tb/sync_fifo_regression_tb.sv 
+# -- Compiling module sync_fifo
+# -- Compiling module sync_fifo_tb
+# ** Warning: tb/sync_fifo_tb.sv(101): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: tb/sync_fifo_tb.sv(106): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# ** Warning: tb/sync_fifo_tb.sv(111): (vlog-2186) SystemVerilog testbench feature
+# (randomization, coverage or assertion) detected in the design.
+# These features are only supported in Questasim.
+# -- Compiling module sync_fifo_regression_tb
+# 
+# Top level modules:
+# 	sync_fifo_tb
+# 	sync_fifo_regression_tb
+# End time: 00:16:20 on Oct 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 3
