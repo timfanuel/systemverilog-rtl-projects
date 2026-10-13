@@ -2,7 +2,7 @@
 
 Small RTL designs with readable interfaces and reproducible, self-checking simulation. Prepared for [timfanuel](https://github.com/timfanuel)'s engineering portfolio.
 
-**Current contents:** a parameterized synchronous FIFO, a two-stage ready/valid pipeline, a pipelined add–multiply datapath, and an 8N1 UART TX/RX core. Existing RTL is preserved unchanged. The located round-robin arbiter awaits review and is not included or claimed as verified.
+**Current contents:** a parameterized synchronous FIFO, a four-requester round-robin arbiter, a two-stage ready/valid pipeline, a pipelined add–multiply datapath, and an 8N1 UART TX/RX core. Existing RTL is preserved unchanged; verification claims below are based on actual simulation runs.
 
 | Design | RTL | Verification | Status |
 | --- | --- | --- | --- |
@@ -10,6 +10,11 @@ Small RTL designs with readable interfaces and reproducible, self-checking simul
 | Pipelined add–multiply | [`projects/pipelined_arithmetic/rtl/pipelined_mac.sv`](projects/pipelined_arithmetic/rtl/pipelined_mac.sv) | Existing directed and randomized scoreboards | 3 directed cases and 4,025 randomized outputs passed at width 8 |
 | UART TX/RX | [`projects/uart/`](projects/uart/) | Serial frame checks, loopback, RX recovery and reset checks | All 256 TX payloads and selected RX/loopback checks passed; basic TX test is smoke only |
 | Synchronous FIFO | [`projects/sync_fifo/`](projects/sync_fifo/) | Original randomized scoreboard and added procedural regressions | 10/10 runs passed across depths 1–256 and widths 1–128; original SVA/coverage unsupported by Starter |
+| Round-robin arbiter | [`projects/round_robin_arbiter/`](projects/round_robin_arbiter/) | Added reference-model and fairness regression | 3/3 seeds passed, each checking 10,211 cycles and all 64 priority/request combinations |
+
+## Round-robin arbiter project
+
+The [arbiter project README](projects/round_robin_arbiter/README.md) documents the fixed four-requester design, one-hot combinational grants, rotating priority, idle retention, and reset behavior. It includes unchanged RTL, a new procedural reference-model testbench, actual logs, source audit, and a captured waveform. From the repository root, run `./projects/round_robin_arbiter/sim/run.ps1` (or pass `-Simulator` with the ModelSim executable path). All three seeds passed. Priority rotates on every clock with an active grant; there is no acceptance acknowledgment or grant lock for a stalled consumer. No synthesis or hardware operation is claimed.
 
 ## Synchronous FIFO project
 
@@ -78,6 +83,6 @@ Saved Quartus Prime 25.1std.0 reports dated **September 8, 2026**, identify `rv_
 
 ## Repository scope and provenance
 
-The repository includes pipeline RTL, its existing testbench, a new regression, simulation scripts, selected reports, captured waveforms, and the separately approved FIFO, arithmetic, and UART core projects. UART echo/command wrappers, the older duplicate TX, standalone adders, the untested FIFO-to-ready/valid adapter, course homework, simulator databases, and programming files are excluded. The located round-robin arbiter remains a review candidate.
+The repository includes pipeline RTL, its existing testbench, a new regression, simulation scripts, selected reports, captured waveforms, and the separately approved FIFO, arbiter, arithmetic, and UART core projects. UART echo/command wrappers, the older duplicate TX, standalone adders, the untested FIFO-to-ready/valid adapter, course homework, simulator databases, and programming files are excluded.
 
-The owner described the pipeline as independent work and explicitly approved public inclusion of the FIFO, arithmetic, and selected UART core projects. No assignment-sharing restriction or third-party source notice was found in the selected source files; this inspection cannot establish original authorship. Vendor notices in saved reports remain intact. No open-source license is assigned automatically. Publication review is in [`docs/PUBLICATION.md`](docs/PUBLICATION.md).
+The owner described the pipeline as independent work and explicitly approved public inclusion of the FIFO, arbiter, arithmetic, and selected UART core projects. No assignment-sharing restriction or third-party source notice was found in the selected source files; this inspection cannot establish original authorship. Vendor notices in saved reports remain intact. No open-source license is assigned automatically. Publication review is in [`docs/PUBLICATION.md`](docs/PUBLICATION.md).

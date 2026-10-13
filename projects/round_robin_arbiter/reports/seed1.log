@@ -1,0 +1,10 @@
+# vsim -onfinish stop -voptargs="+acc" -lib build/lib round_robin_arbiter_tb -gSEED=1 
+# Start time: 00:33:58 on Oct 13,2026
+# Loading sv_std.std
+# Loading build/lib.round_robin_arbiter_tb
+# Loading build/lib.round_robin_arbiter
+# PASS ARBITER seed=1 checked_cycles=10211 priority_request_pairs=64: onehot/subset, rotation, persistent fairness, idle retention, reset priority
+# ** Note: $finish    : tb/round_robin_arbiter_tb.sv(91)
+#    Time: 102936 ns  Iteration: 0  Instance: /round_robin_arbiter_tb
+# Break in Module round_robin_arbiter_tb at tb/round_robin_arbiter_tb.sv line 91
+# Stopped at tb/round_robin_arbiter_tb.sv line 91
