@@ -1,0 +1,11 @@
+# End time: 00:03:10 on Oct 13,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -onfinish stop -voptargs="+acc" -lib build/lib uart_tx_tb_extended 
+# Start time: 00:03:10 on Oct 13,2026
+# Loading sv_std.std
+# Loading build/lib.uart_tx_tb_extended
+# Loading build/lib.uart_tx
+# ** Note: $stop    : tb/uart_tx_tb2.sv(106)
+#    Time: 415 ns  Iteration: 1  Instance: /uart_tx_tb_extended
+# Break in Module uart_tx_tb_extended at tb/uart_tx_tb2.sv line 106
+# Stopped at tb/uart_tx_tb2.sv line 106

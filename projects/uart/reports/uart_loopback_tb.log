@@ -1,0 +1,12 @@
+# End time: 00:03:10 on Oct 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -onfinish stop -voptargs="+acc" -lib build/lib uart_loopback_tb 
+# Start time: 00:03:10 on Oct 13,2026
+# Loading sv_std.std
+# Loading build/lib.uart_loopback_tb
+# Loading build/lib.uart_tx
+# Loading build/lib.uart_rx
+# ** Note: $finish    : tb/uart_loopback_tb.sv(89)
+#    Time: 4075 ns  Iteration: 2  Instance: /uart_loopback_tb
+# Break in Module uart_loopback_tb at tb/uart_loopback_tb.sv line 89
+# Stopped at tb/uart_loopback_tb.sv line 89

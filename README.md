@@ -2,12 +2,17 @@
 
 Small RTL designs with readable interfaces and reproducible, self-checking simulation. Prepared for [timfanuel](https://github.com/timfanuel)'s engineering portfolio.
 
-**Current contents:** a parameterized two-stage ready/valid pipeline and a pipelined add–multiply datapath. Both RTL modules are preserved unchanged. The synchronous FIFO and round-robin arbiter were not found in the inspected local folders and are not included or claimed as verified.
+**Current contents:** a parameterized two-stage ready/valid pipeline, a pipelined add–multiply datapath, and an 8N1 UART TX/RX core. Existing RTL is preserved unchanged. The synchronous FIFO and round-robin arbiter were not found in the inspected local folders and are not included or claimed as verified.
 
 | Design | RTL | Verification | Status |
 | --- | --- | --- | --- |
 | Ready/valid pipeline | [`rtl/rv_pipeline.sv`](rtl/rv_pipeline.sv) | Original randomized scoreboard and added portable regression | 9/9 regression configurations passed; original scoreboard completed without errors |
 | Pipelined add–multiply | [`projects/pipelined_arithmetic/rtl/pipelined_mac.sv`](projects/pipelined_arithmetic/rtl/pipelined_mac.sv) | Existing directed and randomized scoreboards | 3 directed cases and 4,025 randomized outputs passed at width 8 |
+| UART TX/RX | [`projects/uart/`](projects/uart/) | Serial frame checks, loopback, RX recovery and reset checks | All 256 TX payloads and selected RX/loopback checks passed; basic TX test is smoke only |
+
+## UART project
+
+The [UART project README](projects/uart/README.md) documents the transmitter, synchronized receiver, and combined wrapper for 8N1 serial communication. It includes unchanged RTL, four existing testbenches, two new focused regressions, actual logs, and a captured waveform. From the repository root, run `./projects/uart/sim/run.ps1` (or pass `-Simulator` with the ModelSim executable path). Testing covers TX divider 4 and TX/RX divider 8; other baud divisors, jitter tolerance, synthesis, and physical hardware operation are not validated. The echo wrapper with measured loss under sustained traffic, paced command demo, duplicate older TX, and unfinished register stub are excluded.
 
 ## Pipelined arithmetic project
 
@@ -68,6 +73,6 @@ Saved Quartus Prime 25.1std.0 reports dated **September 8, 2026**, identify `rv_
 
 ## Repository scope and provenance
 
-The repository includes pipeline RTL, its existing testbench, a new regression, simulation scripts, selected reports, a compact waveform, and the separately approved pipelined arithmetic project. UART, standalone adders, the untested FIFO-to-ready/valid adapter, course homework, simulator databases, and programming files are excluded.
+The repository includes pipeline RTL, its existing testbench, a new regression, simulation scripts, selected reports, captured waveforms, and the separately approved arithmetic and UART core projects. UART echo/command wrappers, the older duplicate TX, standalone adders, the untested FIFO-to-ready/valid adapter, course homework, simulator databases, and programming files are excluded.
 
-The owner described the pipeline as independent work and explicitly approved public inclusion of the arithmetic project. No assignment-sharing restriction or third-party source notice was found in the selected source files; this inspection cannot establish original authorship. Vendor notices in saved reports remain intact. No open-source license is assigned automatically. Publication review is in [`docs/PUBLICATION.md`](docs/PUBLICATION.md).
+The owner described the pipeline as independent work and explicitly approved public inclusion of the arithmetic and selected UART core projects. No assignment-sharing restriction or third-party source notice was found in the selected source files; this inspection cannot establish original authorship. Vendor notices in saved reports remain intact. No open-source license is assigned automatically. Publication review is in [`docs/PUBLICATION.md`](docs/PUBLICATION.md).

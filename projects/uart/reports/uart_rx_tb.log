@@ -1,0 +1,13 @@
+# End time: 00:03:10 on Oct 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -onfinish stop -voptargs="+acc" -lib build/lib uart_rx_tb 
+# Start time: 00:03:10 on Oct 13,2026
+# Loading sv_std.std
+# Loading build/lib.uart_rx_tb
+# Loading build/lib.uart_rx
+# PASS: False start correctly rejected
+# PASS: Receiver recovered and received a5
+# ** Note: $finish    : tb/uart_rx_tb.sv(116)
+#    Time: 930 ns  Iteration: 1  Instance: /uart_rx_tb
+# Break in Module uart_rx_tb at tb/uart_rx_tb.sv line 116
+# Stopped at tb/uart_rx_tb.sv line 116

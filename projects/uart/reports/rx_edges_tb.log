@@ -1,0 +1,12 @@
+# End time: 00:03:11 on Oct 13,2026, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim -onfinish stop -voptargs="+acc" -lib build/lib rx_edges_tb 
+# Start time: 00:03:11 on Oct 13,2026
+# Loading sv_std.std
+# Loading build/lib.rx_edges_tb
+# Loading build/lib.uart_rx
+# PASS RX_EDGES valid_frames=3: bad-stop rejection, reset abort/recovery, 00/FF/A5, one-cycle valid
+# ** Note: $finish    : tb/rx_edges_tb.sv(44)
+#    Time: 8330 ns  Iteration: 1  Instance: /rx_edges_tb
+# Break in Module rx_edges_tb at tb/rx_edges_tb.sv line 44
+# Stopped at tb/rx_edges_tb.sv line 44

@@ -1,0 +1,3 @@
+* text=auto
+rtl/*.sv -text
+tb/uart*.sv -text

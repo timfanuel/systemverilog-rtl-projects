@@ -1,0 +1,14 @@
+# End time: 00:03:11 on Oct 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -onfinish stop -voptargs="+acc" -lib build/lib tx_all_bytes_tb 
+# Start time: 00:03:11 on Oct 13,2026
+# Loading sv_std.std
+# Loading build/lib.tx_all_bytes_tb
+# Loading build/lib.uart_tx
+# PASS TX_ALL_BYTES frames=256: 8N1 payloads, input latching, busy-time valid rejection
+# ** Note: $finish    : tb/tx_all_bytes_tb.sv(47)
+#    Time: 208350 ns  Iteration: 1  Instance: /tx_all_bytes_tb
+# Break in Module tx_all_bytes_tb at tb/tx_all_bytes_tb.sv line 47
+# Stopped at tb/tx_all_bytes_tb.sv line 47
+# End time: 00:03:11 on Oct 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0

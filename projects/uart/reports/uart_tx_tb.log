@@ -1,0 +1,9 @@
+# vsim -onfinish stop -voptargs="+acc" -lib build/lib uart_tx_tb 
+# Start time: 00:03:09 on Oct 13,2026
+# Loading sv_std.std
+# Loading build/lib.uart_tx_tb
+# Loading build/lib.uart_tx
+# ** Note: $stop    : tb/uart_tx_tb.sv(58)
+#    Time: 475 ns  Iteration: 1  Instance: /uart_tx_tb
+# Break in Module uart_tx_tb at tb/uart_tx_tb.sv line 58
+# Stopped at tb/uart_tx_tb.sv line 58

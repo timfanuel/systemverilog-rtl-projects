@@ -1,0 +1,23 @@
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:03:09 on Oct 13,2026
+# vlog -sv -work build/lib rtl/uart_tx.sv rtl/uart_rx.sv rtl/uart.sv tb/uart_tx_tb.sv tb/uart_tx_tb2.sv tb/uart_rx_tb.sv tb/uart_loopback_tb.sv tb/rx_edges_tb.sv tb/tx_all_bytes_tb.sv 
+# -- Compiling module uart_tx
+# -- Compiling module uart_rx
+# -- Compiling module uart
+# -- Compiling module uart_tx_tb
+# -- Compiling module uart_tx_tb_extended
+# -- Compiling module uart_rx_tb
+# -- Compiling module uart_loopback_tb
+# -- Compiling module rx_edges_tb
+# -- Compiling module tx_all_bytes_tb
+# 
+# Top level modules:
+# 	uart
+# 	uart_tx_tb
+# 	uart_tx_tb_extended
+# 	uart_rx_tb
+# 	uart_loopback_tb
+# 	rx_edges_tb
+# 	tx_all_bytes_tb
+# End time: 00:03:09 on Oct 13,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
