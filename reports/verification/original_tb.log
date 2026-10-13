@@ -1,0 +1,22 @@
+# End time: 23:18:00 on Oct 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -onfinish stop -lib build/lib rv_pipeline_tb 
+# Start time: 23:18:00 on Oct 12,2026
+# Loading sv_std.std
+# Loading build/lib.rv_pipeline_tb
+# Loading build/lib.rv_pipeline
+# ** Warning: (vsim-8311) System Verilog assertions are supported only in Questasim.
+# 
+# ----- READY/VALID PIPELINE SUMMARY -----
+# Input transfers:       3775
+# Output transfers:      3775
+# Output stall cycles:   3751
+# Final queue size:      0
+# ----------------------------------------
+# 
+# ** Note: $finish    : tb/rv_pipeline_tb.sv(147)
+#    Time: 100030 ns  Iteration: 1  Instance: /rv_pipeline_tb
+# Break in Module rv_pipeline_tb at tb/rv_pipeline_tb.sv line 147
+# Stopped at tb/rv_pipeline_tb.sv line 147
+# End time: 23:18:00 on Oct 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 1

@@ -1,0 +1,36 @@
+# Simulation and tool-generated output
+/build/
+/work/
+/db/
+/incremental_db/
+/output_files/
+/simulation/
+modelsim.ini
+transcript
+*.wlf
+*.vcd
+*.fst
+*.vvp
+*.ucdb
+*.cr.mti
+*.qws
+*.bak
+*.jou
+*.log
+*.sof
+*.pof
+*.bit
+*.bin
+.Xil/
+*.cache/
+# Curated verification logs are intentional evidence.
+!/reports/verification/*.log
+# Local credentials and editor state
+.env
+.env.*
+*.pem
+*.key
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store

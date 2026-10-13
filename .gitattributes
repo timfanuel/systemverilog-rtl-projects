@@ -1,0 +1,6 @@
+* text=auto
+# Keep archived inputs byte-for-byte, including original line endings.
+rtl/rv_pipeline.sv -text
+tb/rv_pipeline_tb.sv -text
+reports/synthesis/*.rpt -text
+*.svg text eol=lf

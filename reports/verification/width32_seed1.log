@@ -1,0 +1,12 @@
+# End time: 23:17:59 on Oct 12,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -onfinish stop -voptargs="+acc" -lib build/lib rv_pipeline_regression_tb -gSEED=1 -gDATA_WIDTH=32 
+# Start time: 23:17:59 on Oct 12,2026
+# Loading sv_std.std
+# Loading build/lib.rv_pipeline_regression_tb
+# Loading build/lib.rv_pipeline
+# PASS width=32 seed=1 accepted=4071 delivered=4069 flushed=2 stalls=3941 max_consecutive=32
+# ** Note: $finish    : tb/rv_pipeline_regression_tb.sv(104)
+#    Time: 100556 ns  Iteration: 0  Instance: /rv_pipeline_regression_tb
+# Break in Module rv_pipeline_regression_tb at tb/rv_pipeline_regression_tb.sv line 104
+# Stopped at tb/rv_pipeline_regression_tb.sv line 104
